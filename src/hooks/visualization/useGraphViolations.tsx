@@ -36,9 +36,13 @@ export default function useGraphViolations(
 
       const idWithRandom = e.id();
       const id = idWithRandom.split('--')[0] || '';
+      const edgeLabel = e.data('interaction');
 
+      if (highlightIds.includes(id) || edgeLabel === 'degrades') {
+        e.addClass('degradation');
+      }
       // Edge should be highlighted
-      if (highlightIds.includes(id)) {
+      if (highlightIds.includes(id) || edgeLabel === 'violates') {
         e.addClass('violation');
         // Edge is a violation and should not be made visible
       } else if (allIds.includes(id) && !visibleIds.includes(id)) {

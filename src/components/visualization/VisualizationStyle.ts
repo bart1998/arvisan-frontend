@@ -41,7 +41,13 @@ const stylesheet: cytoscape.Stylesheet[] = [{
     'target-arrow-color': '#FF0000',
     'source-arrow-color': '#FF8888',
   },
-}, {
+},{
+selector: 'edge.degradation, edge[properties.violation = "true"]',
+css: {
+  'line-gradient-stop-colors': ['#FFC188', '#FF7C01'],
+  'target-arrow-color': '#FF7C01',
+  'source-arrow-color': '#FFC188',
+}, }, {
   selector: 'node[properties.selected = "true"]',
   css: {
     'border-color': '#ff0000',
