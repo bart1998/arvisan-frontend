@@ -48,6 +48,12 @@ export default function HoverDetailsEdge({ edge }: Props) {
         </td>
       </tr>
       <tr>
+        <td className="pe-2 text-end fw-bold">Label:</td>
+        <td>
+          {edge.data('interaction')}
+        </td>
+      </tr>
+      <tr>
         <td className="pe-2 text-end fw-bold text-nowrap">Function-level dependencies:</td>
         <td>{edge.data('properties.nrFunctionDependencies')}</td>
       </tr>
