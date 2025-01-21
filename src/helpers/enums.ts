@@ -33,3 +33,8 @@ export enum DependencyProfileCategory {
    *  modules outside the component. */
   TRANSIT = 'transit',
 }
+
+export enum InterfaceProfileCategory {
+  EXTERNAL = 'External', 
+  INTERNAL = 'Internal',
+}
