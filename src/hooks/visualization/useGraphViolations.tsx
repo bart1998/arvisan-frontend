@@ -33,13 +33,14 @@ export default function useGraphViolations(
     cy.current.edges().forEach((e: cytoscape.EdgeSingular) => {
       e.removeClass('violation');
       e.removeClass('hidden');
+      e.removeClass('deviation');
 
       const idWithRandom = e.id();
       const id = idWithRandom.split('--')[0] || '';
       const edgeLabel = e.data('interaction');
 
-      if (highlightIds.includes(id) || edgeLabel === 'degrades') {
-        e.addClass('degradation');
+      if (highlightIds.includes(id) || edgeLabel === 'deviates') {
+        e.addClass('deviation');
       }
       // Edge should be highlighted
       if (highlightIds.includes(id) || edgeLabel === 'violates') {

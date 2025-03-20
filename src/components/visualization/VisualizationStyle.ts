@@ -42,7 +42,7 @@ const stylesheet: cytoscape.Stylesheet[] = [{
     'source-arrow-color': '#FF8888',
   },
 },{
-selector: 'edge.degradation, edge[properties.violation = "true"]',
+selector: 'edge.deviation, edge[properties.violation = "true"]',
 css: {
   'line-gradient-stop-colors': ['#FFC188', '#FF7C01'],
   'target-arrow-color': '#FF7C01',
