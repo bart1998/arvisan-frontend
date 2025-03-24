@@ -4,6 +4,7 @@ This is the frontend for the architecture
 visualizer and analysis tool ARViSAN.
 
 ## Table of Contents
+- [ARViSAN repositories](#arvisan-repositories)
 - [Getting Started](#getting-started)
 - [Requirements](#requirements)
 - [Features](#features)
@@ -23,6 +24,13 @@ visualizer and analysis tool ARViSAN.
         - [Node colours](#node-colours)
         - [Edge colours](#edge-colours)
 - [Installation for Development](#installation-for-development)
+
+## ARViSAN repositories
+ARViSAN is separated into two main and two additional repositories described below:
+ - **ARViSAN frontend (this repository)**: Responsible for rendering the graph and showing the analyses to the end user.
+- **[ARVISAN backend](https://github.com/Software-Analytics-Visualisation-Team/arvisan-backend)**: Contains various endpoints for processing and executing queries to the graph database. 
+- **[ARVISAN dependency parser](https://github.com/Software-Analytics-Visualisation-Team/arvisan-dependency-parser)**: Extendable Python script to preprocess software dependencies and convert them in ARViSAN's input format. Can be used to create input for visualizing confromance between expected (allowed) dependencies and actual (implementation) dependencies.
+- **[ARVISAN input parser](https://github.com/Software-Analytics-Visualisation-Team/arvisan-input-parser)**:  Script created to specifically parse *OutSystems* consumer-producer data with functional domain (Application group) data into a labeled property graph, readable by Cytoscape. This script was used in the proof-of-concept version of ARViSAN.
 
 
 ## Getting Started
