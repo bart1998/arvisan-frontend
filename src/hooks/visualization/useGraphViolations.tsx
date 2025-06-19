@@ -45,6 +45,14 @@ export default function useGraphViolations(
       // Edge should be highlighted
       if (highlightIds.includes(id) || edgeLabel === 'violates') {
         e.addClass('violation');
+      } else if (edgeLabel === 'violates_new') {
+        e.addClass('violation'); // Violation class is red
+      } else if (edgeLabel === 'violates_removed') {
+        e.addClass('removed_violation');
+      } else if (edgeLabel === 'violates_remaining') {
+        // Do not assign a different color
+      } else if (edgeLabel === 'calls_grey') {
+        e.addClass('grey');
         // Edge is a violation and should not be made visible
       } else if (allIds.includes(id) && !visibleIds.includes(id)) {
         e.addClass('hidden');

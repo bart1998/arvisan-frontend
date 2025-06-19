@@ -41,6 +41,20 @@ const stylesheet: cytoscape.Stylesheet[] = [{
     'target-arrow-color': '#FF0000',
     'source-arrow-color': '#FF8888',
   },
+}, {
+  selector: 'edge.removed_violation, edge[properties.removed_violation = "true"]',
+  css: {
+    'line-gradient-stop-colors': ['#A2FF88', '#55FF00'],
+    'target-arrow-color': '#55FF00',
+    'source-arrow-color': '#A2ff88',
+  },
+}, {
+  selector: 'edge.grey, edge[properties.grey = "true"]',
+  css: {
+    'line-gradient-stop-colors': ['#D2D2D2', '#909090'],
+    'target-arrow-color': '#909090',
+    'source-arrow-color': '#D2D2D2',
+  },
 },{
 selector: 'edge.deviation, edge[properties.violation = "true"]',
 css: {
